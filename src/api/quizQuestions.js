@@ -4,11 +4,13 @@ var quizQuestions = [
       answers: [
           {
               type: "no Physical Therapy",
-              content: "Yes"
+              content: "Yes",
+              weight: 0
           },
           {
               type: "Physical Therapy",
-              content: "No"
+              content: "No",
+              weight: 1
           }
       ]
   },
@@ -17,11 +19,13 @@ var quizQuestions = [
       answers: [
         {
             type: "no Physical Therapy",
-            content: "Yes"
+            content: "Yes",
+            weight: 0
         },
         {
             type: "Physical Therapy",
-            content: "No"
+            content: "No",
+            weight: 1
         }
     ]
   },
@@ -30,11 +34,13 @@ var quizQuestions = [
       answers: [
         {
             type: "no Physical Therapy",
-            content: "Yes"
+            content: "Yes",
+            weight: 0
         },
         {
             type: "Physical Therapy",
-            content: "No"
+            content: "No",
+            weight: 1
         }
     ]
   },
@@ -43,11 +49,13 @@ var quizQuestions = [
       answers: [
         {
             type: "no Physical Therapy",
-            content: "Yes"
+            content: "Yes",
+            weight: 0
         },
         {
             type: "Physical Therapy",
-            content: "No"
+            content: "No",
+            weight: 1
         }
     ]
   },
@@ -56,11 +64,13 @@ var quizQuestions = [
       answers: [
         {
             type: "no Physical Therapy",
-            content: "Yes"
+            content: "Yes",
+            weight: 0
         },
         {
             type: "Physical Therapy",
-            content: "No"
+            content: "No",
+            weight: 1
         }
     ]
   },
@@ -69,11 +79,13 @@ var quizQuestions = [
     answers: [
         {
             type: "no Physical Therapy",
-            content: "Yes"
+            content: "Yes",
+            weight: 0
         },
         {
             type: "Physical Therapy",
-            content: "No"
+            content: "No",
+            weight: 1
         }
     ]
     },
@@ -82,24 +94,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "no Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 0
             },
             {
                 type: "Physical Therapy",
-                content: "No"
-            }
-        ]
-    },
-    {
-        question: "Can you squat to the floor without losing your balance 5-6 times without pain?",
-        answers: [
-            {
-                type: "no Physical Therapy",
-                content: "Yes"
-            },
-            {
-                type: "Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 1
             }
         ]
     },
@@ -108,11 +109,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "no Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 0
             },
             {
                 type: "Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 1
             }
         ]
     },
@@ -121,11 +124,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "no Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 0
             },
             {
                 type: "Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 1
             }
         ]
     },
@@ -134,11 +139,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 1
             },
             {
                 type: "no Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 0
             }
         ]
     },
@@ -147,11 +154,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 1
             },
             {
                 type: "no Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 0
             }
         ]
     },
@@ -160,11 +169,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 1
             },
             {
                 type: "no Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 0
             }
         ]
     },
@@ -173,11 +184,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 1
             },
             {
                 type: "no Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 0
             }
         ]
     },
@@ -186,11 +199,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 1
             },
             {
                 type: "no Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 0
             }
         ]
     },
@@ -199,11 +214,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 1
             },
             {
                 type: "no Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 0
             }
         ]
     },
@@ -212,11 +229,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 1
             },
             {
                 type: "no Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 0
             }
         ]
     },
@@ -225,11 +244,13 @@ var quizQuestions = [
         answers: [
             {
                 type: "Physical Therapy",
-                content: "Yes"
+                content: "Yes",
+                weight: 1
             },
             {
                 type: "no Physical Therapy",
-                content: "No"
+                content: "No",
+                weight: 0
             }
         ]
     },
@@ -237,11 +258,12 @@ var quizQuestions = [
         question: "Are you currently in active treatment for cancer?",
         answers: [
             {
-                type: "no Physical Therapy",
-                content: "Yes"
+                type: "Physical Therapy",
+                content: "Yes",
+                weight: 1
             },
             {
-                type: "Physical Therapy",
+                type: "no Physical Therapy",
                 content: "No"
             }
         ]

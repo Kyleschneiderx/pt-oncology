@@ -16,7 +16,8 @@ class App extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {},
-      result: ''
+      result: '',
+      weight: 0
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -54,7 +55,6 @@ class App extends Component {
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
-
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
@@ -87,11 +87,18 @@ class App extends Component {
 
   getResults() {
     const answersCount = this.state.answersCount;
+    console.log(answersCount)
     const answersCountKeys = Object.keys(answersCount);
     const answersCountValues = answersCountKeys.map(key => answersCount[key]);
-    const maxAnswerCount = Math.max.apply(null, answersCountValues);
+    console.log(answersCountKeys[1])
+    if(answersCountValues[1] >=1){
+      console.log("in if")
+      return [answersCountKeys[1]]
+    }else{
+      const maxAnswerCount = Math.max.apply(null, answersCountValues);
+      return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
+    }
 
-    return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
   }
 
   setResults(result) {
