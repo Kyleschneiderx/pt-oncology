@@ -97,10 +97,12 @@ app.use((error, req, res, next) => {
   
 });
 
+const port = process.env.PORT || 8080
+
 mongoose
   .connect(
     'mongodb+srv://kyleschneider:H3ABMHGEu2zUfqsu@cluster0.1p3nw.mongodb.net/pt-oncology?retryWrites=true&w=majority')
   .then(result => {
-    app.listen(8080);
+    app.listen(port);
   })
   .catch(err => console.log(err));
