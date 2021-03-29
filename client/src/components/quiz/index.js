@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import quizQuestions from './api/quizQuestions';
-import Quiz from './components/Quiz';
-import Result from './components/Result';
-import logo from './svg/LCPT.jpeg';
-import './App.css';
+import quizQuestions from '../../api/quizQuestions';
+import Quiz from './Quiz';
+import Result from './Result';
+import {connect} from 'react-redux'
+import logo from '../../svg/LCPT.jpeg';
+import '../quiz/index.css';
 
-class App extends Component {
+class QuizPage extends Component {
   constructor(props) {
     super(props);
 
@@ -17,7 +18,8 @@ class App extends Component {
       answer: '',
       answersCount: {},
       result: '',
-      weight: 0
+      weight: 0,
+      ListQA: []
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -55,6 +57,15 @@ class App extends Component {
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
+    var value = event.currentTarget.value
+    this.setState( state =>{
+      const ListQA = state.ListQA.concat({question: this.state.question,
+      answer:value })
+      return {
+        ListQA,
+      };
+    })
+    console.log(this.state.ListQA)
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
@@ -91,12 +102,14 @@ class App extends Component {
     const answersCountKeys = Object.keys(answersCount);
     const answersCountValues = answersCountKeys.map(key => answersCount[key]);
     console.log(answersCountKeys[1])
-    if(answersCountValues[1] >=1){
+    console.log(this.state.ListQA)
+    if(answersCountValues[0] >=1){
       console.log("in if")
-      return [answersCountKeys[1]]
+      return [answersCountKeys[0]]
     }else{
-      const maxAnswerCount = Math.max.apply(null, answersCountValues);
-      return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
+      // const maxAnswerCount = Math.max.apply(null, answersCountValues);
+      // return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
+      return[answersCountKeys[1]]
     }
 
   }
@@ -139,4 +152,12 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return { isSignedIn: state.auth.isSignedIn,
+  userId: state.auth.userId };
+};
+
+
+export default connect(mapStateToProps, {
+
+})(QuizPage);
